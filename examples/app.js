@@ -8,7 +8,8 @@
 * */
 var express = require('express'),
     http = require('http'),
-    upload = require('../');
+    upload = require('../'),
+    AWS = require('aws-sdk');
 
 var swig = require('swig');
 
@@ -29,6 +30,13 @@ swig.setDefaults({
     cache: false   // default 'memory'
 });
 
+var varS3Region = 'THE REGION FROM AMAZON',
+    s3Bucket = 'YOUR BUCKET NAME';
+AWS.config.update({
+    "accessKeyId"    : "YOUR ACCESS KEY ID",
+    "secretAccessKey": "YOUR SECRET ACCESS KEY",
+    "region"         : varS3Region
+});
 
 // jquery-file-upload helper
 app.use('/upload/default', function (req, res, next) {
@@ -36,7 +44,16 @@ app.use('/upload/default', function (req, res, next) {
         tmpDir: dirs.temp,
         uploadDir: __dirname + dirs.default,
         uploadUrl: dirs.default_url,
-        imageVersions: resizeConf.default
+        imageVersions: resizeConf.default,
+        s3Bucket: function () {
+            return s3Bucket;
+        },
+        s3Region: function () {
+            return varS3Region;
+        },
+        s3Url: function () {
+            return dirs.default_s3_url;
+        }
     })(req, res, next);
 });
 
@@ -44,7 +61,16 @@ app.use('/upload/location', upload.fileHandler({
     tmpDir: dirs.temp,
     uploadDir: __dirname + dirs.location,
     uploadUrl: dirs.location_url,
-    imageVersions: resizeConf.location
+    imageVersions: resizeConf.location,
+    s3Bucket: function () {
+        return s3Bucket;
+    },
+    s3Region: function () {
+        return varS3Region;
+    },
+    s3Url: function () {
+        return dirs.default_s3_url;
+    }
 }));
 
 app.use('/upload/location/list', function (req, res, next) {

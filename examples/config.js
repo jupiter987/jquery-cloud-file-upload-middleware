@@ -50,6 +50,7 @@ exports.directors = {
 
     default: '/public/uploads/default',
     default_url: '/uploads/default',
+    default_s3_url: '/uploads',
 
     location: '/public/uploads/location',
     location_url: '/uploads/location'
