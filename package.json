@@ -1,7 +1,7 @@
 {
   "name": "jquery-cloud-file-upload-middleware",
   "author": "Manuel Gutierrez @drginm",
-  "description": "jQuery-Cloud-File-Upload Express.js Middleware",
+  "description": "jQuery-Cloud-File-Upload Express.js Middleware S3 Aws",
   "keywords": [
     "jquery",
     "upload",
