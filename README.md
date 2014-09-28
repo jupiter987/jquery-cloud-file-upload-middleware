@@ -1,19 +1,23 @@
 jquery-file-upload-middleware
 =============================
 
+Fork from: [jquery-file-upload-middleware](https://github.com/aguidrevitch/jquery-file-upload-middleware)
+
+Initial support for s3 file uploads.
+
 jQuery-File-Upload Express.js middleware. Based on the server code of [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload)
 
 Installation:
 
 ```
-    $ npm install jquery-file-upload-middleware
+    $ npm install jquery-cloud-file-upload-middleware
 ```
 
 Usage:
 
 ```javascript
     var express = require("express"),
-        upload = require('jquery-file-upload-middleware');
+        upload = require('jquery-cloud-file-upload-middleware');
 
     var app = express();
 
@@ -26,6 +30,15 @@ Usage:
                 width: 80,
                 height: 80
             }
+        },
+        s3Bucket: function () {
+            return s3Bucket;
+        },
+        s3Region: function () {
+            return varS3Region;
+        },
+        s3Url: function () {
+            return dirs.default_s3_url;
         }
     });
 

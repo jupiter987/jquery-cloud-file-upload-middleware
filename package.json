@@ -1,14 +1,14 @@
 {
-  "name": "jquery-file-upload-middleware",
-  "author": "Aleksandr Guidrevitch <aguidrevitch@gmail.com>",
-  "description": "jQuery-File-Upload Express.js Middleware",
+  "name": "jquery-cloud-file-upload-middleware",
+  "author": "Manuel Gutierrez @drginm",
+  "description": "jQuery-Cloud-File-Upload Express.js Middleware",
   "keywords": [
     "jquery",
     "upload",
     "express",
     "middleware"
   ],
-  "version": "0.1.7",
+  "version": "0.0.1",
   "dependencies": {
     "async": "*",
     "aws-sdk": "^2.0.17",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/aguidrevitch/jquery-file-upload-middleware.git"
+    "url": "git@github.com:drginm/jquery-cloud-file-upload-middleware.git"
   },
   "main": "./index.js",
   "readmeFilename": "README.md",
@@ -30,6 +30,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "_id": "jquery-file-upload-middleware@0.1.7",
+  "_id": "jquery-cloud-file-upload-middleware@0.0.1",
   "license": "MIT"
 }
