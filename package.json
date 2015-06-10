@@ -1,6 +1,6 @@
 {
-  "name": "jquery-cloud-file-upload-middleware",
-  "author": "Manuel Gutierrez @drginm",
+  "name": "jquery-s3-file-upload-middleware",
+  "author": "Siera Ruo @gmail",
   "description": "jQuery-Cloud-File-Upload Express.js Middleware S3 Aws",
   "keywords": [
     "jquery",
@@ -8,7 +8,7 @@
     "express",
     "middleware"
   ],
-  "version": "0.0.4",
+  "version": "0.0.1",
   "dependencies": {
     "async": "*",
     "aws-sdk": "^2.0.17",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:drginm/jquery-cloud-file-upload-middleware.git"
+    "url": "git@github.com:sieraruo/jquery-cloud-file-upload-middleware.git"
   },
   "main": "./index.js",
   "readmeFilename": "README.md",
@@ -30,6 +30,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "_id": "jquery-cloud-file-upload-middleware@0.0.4",
+  "_id": "jquery-s3-file-upload-middleware@0.0.1",
   "license": "MIT"
 }
